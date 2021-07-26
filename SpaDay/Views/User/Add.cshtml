@@ -1,0 +1,23 @@
+﻿<h1>Add User</h1>
+@if (ViewBag.ErrorMessage != null)
+{
+    <p>@ViewBag.ErrorMessage</p>
+}
+
+<form method="post" action="/user">
+    <label>UserName</label>
+    <input name="username" type="text" value= "@ViewBag.username" />
+
+    <label>Password</label>
+    <input type="password" name ="password" />
+
+    <label>Verify Password</label>
+    <input type="password" name ="verify" />
+
+    <label>Email</label>
+    <input type="email" name= "email" value= "@ViewBag.email" />
+
+    <input type="submit" value="Add User" />
+
+
+</form>
